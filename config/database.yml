@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: <%= ENV.fetch('POSTGRES_HOST') %>
+  username: <%= ENV.fetch('POSTGRES_USER') %>
+  password: <%= ENV.fetch('POSTGRES_PASSWORD') %>
+
+development:
+  <<: *default
+  database: hacking_fest_ruby_ai_development
+
+test:
+  <<: *default
+  database: hacking_fest_ruby_ai_test
+
+production:
+  <<: *default
+  database: hacking_fest_ruby_ai_production
+  username: hacking_fest_ruby_ai
+  password: <%= ENV["HACKING_FEST_RUBY_AI_DATABASE_PASSWORD"] %>
