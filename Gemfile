@@ -45,7 +45,10 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
+gem "image_processing", "~> 1.2"
+
+# Validations for Active Storage (presence) [https://github.com/igorkasyanchuk/active_storage_validations]
+gem 'active_storage_validations'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -53,6 +56,18 @@ group :development, :test do
 
   # Shim to load environment variables from .env into ENV in development. [https://github.com/bkeepers/dotenv]
   gem 'dotenv'
+
+  # A fixtures replacement with a straightforward definition syntax [https://github.com/thoughtbot/factory_bot_rails]
+  gem 'factory_bot_rails'
+
+  # Pry is a runtime developer console and IRB alternative with powerful introspection capabilities. [https://github.com/pry/pry]
+  gem 'pry', '~> 0.14.2'
+
+  # It's a library for generating fake data such as names, addresses, and phone numbers. [https://github.com/faker-ruby/faker]
+  gem 'faker'
+
+  # Capybara helps you test web applications by simulating how a real user would interact with your app. [https://github.com/teamcapybara/capybara]
+  gem 'capybara'
 end
 
 group :development do
@@ -64,4 +79,10 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  # Selenium implements the W3C WebDriver protocol to automate popular browsers. [https://github.com/SeleniumHQ/selenium/wiki/Ruby-Bindings]
+  gem "selenium-webdriver"
+
+  # Run Selenium tests more easily with automatic installation and updates for all supported webdrivers. [https://github.com/titusfortner/webdrivers]
+  gem "webdrivers", '~> 5.3.0'
 end
