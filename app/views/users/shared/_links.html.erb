@@ -1,0 +1,7 @@
+<%- if devise_mapping.omniauthable? %>
+  <%- resource_class.omniauth_providers.each do |provider| %>
+    <div class="flex justify-center items-center">
+      <%= button_to image_tag("web_neutral_rd_ctn@3x.png", width: 195, class: "mt-1 mx-2"), omniauth_authorize_path(resource_name, provider), data: { turbo: false }, method: :post %><br />
+    </div>
+  <% end %>
+<% end %>

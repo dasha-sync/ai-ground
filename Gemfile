@@ -53,6 +53,19 @@ gem 'active_storage_validations'
 # Tailwind CSS is a utility-first CSS framework [https://github.com/rails/tailwindcss-rails]
 gem "tailwindcss-rails", "~> 2.6"
 
+# A flexible authentication solution for Rails based on Warden. [https://github.com/heartcombo/devise]
+gem "devise"
+
+# A library that standardizes multi-provider authentication for web applications. [https://github.com/omniauth/omniauth]
+gem "omniauth"
+
+# The gem will validate the code via a server-side request to Google [https://github.com/zquestz/omniauth-google-oauth2]
+gem "omniauth-google-oauth2"
+
+# Provides CSRF protection on OmniAuth request endpoint on Rails application. [https://github.com/cookpad/omniauth-rails_csrf_protection]
+gem "omniauth-rails_csrf_protection", "~> 1.0"
+
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
