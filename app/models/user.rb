@@ -3,6 +3,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:google_oauth2]
 
+  has_many :messages, dependent: :destroy
+
   validates :username, presence: true
   validates :email, presence: true, format: { with: /^[^@\s]+@[^@\s]+\.[^@\s]+$/, multiline: true }
   validates :password, presence: true, length: { within: 6..20 }
