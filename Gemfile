@@ -65,6 +65,9 @@ gem "omniauth-google-oauth2"
 # Provides CSRF protection on OmniAuth request endpoint on Rails application. [https://github.com/cookpad/omniauth-rails_csrf_protection]
 gem "omniauth-rails_csrf_protection", "~> 1.0"
 
+# The inference API is a free Machine Learning API from Hugging Face.
+gem "hugging-face"
+
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -84,6 +87,9 @@ group :development, :test do
 
   # Capybara helps you test web applications by simulating how a real user would interact with your app. [https://github.com/teamcapybara/capybara]
   gem 'capybara'
+
+  # An HTTP client library abstraction layer that provides a common interface over many adapters [https://lostisland.github.io/faraday/#/]
+  gem 'faraday'
 end
 
 group :development do

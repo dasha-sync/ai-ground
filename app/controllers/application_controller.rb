@@ -1,3 +1,6 @@
+require "hugging_face"
+require "./app/services/hugging_face"
+
 class ApplicationController < ActionController::Base
   skip_before_action :verify_authenticity_token
   before_action :configure_sign_up_params, only: [:create], if: :devise_controller?

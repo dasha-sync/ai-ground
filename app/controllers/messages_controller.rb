@@ -3,18 +3,20 @@ class MessagesController < ApplicationController
   before_action :set_message, only: %i[edit update]
 
   def index
-    @message = Message.new
     @messages = current_user.messages
-    new
   end
 
-  def new; end
+  def new
+    @message = Message.new
+  end
 
   def edit; end
 
   def create
+    client = HuggingFace::InferenceService.new
     @message = Message.new(message_params)
     @message.user_id = current_user.id
+    @message.answer = client.call(@message.body)[0]["generated_text"]
 
     if @message.save
       redirect_to root_path

@@ -1,1 +1,19 @@
-<%= render 'messages/form' %>
+<div class="flex flex-col mb-5">
+  <% @messages.reverse.each do |message| %>
+    <div class="flex mx-auto flex-col w-4/5 mt-4">
+      <div class="flex items-center space-x-2 rtl:space-x-reverse">
+        <%= image_tag(user_avatar, width: 35, class: "mb-1 rounded-lg") %>
+        <span class="text-sm font-semibold text-gray-900 dark:text-white"><%= message.user.username %></span>
+        <span class="text-sm font-normal text-gray-500 dark:text-gray-400"><%= message.created_at.strftime('%H:%M') %></span>
+      </div>
+      <div class="w-full flex flex-col leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
+        <p class="text-sm font-semibold max-w-fit text-gray-900 dark:text-white"><%= message.body %></p>
+      </div>
+    </div>
+    <div class="flex mx-auto flex-col w-4/5 mt-4">
+      <div class="w-full flex flex-col leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-xl dark:bg-gray-700">
+        <p class="text-sm font-semibold max-w-fit text-gray-900 dark:text-white"><%= message.answer %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

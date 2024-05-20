@@ -1,7 +1,7 @@
 # Ruby + AI Hacking Fest project
 *forked repository in order to participate in the hacking fest.
 
-Rails app with implemention [stabilityai/stable-diffusion-xl-base-1.0](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0) AI model
+Rails app with implemention [bigscience/bloom](https://huggingface.co/bigscience/bloom) Large Language model, trained to continue text from a prompt on vast amounts of text data using industrial-scale computational resources.
 
 # Getting started
 

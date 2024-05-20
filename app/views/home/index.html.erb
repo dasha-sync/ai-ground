@@ -1,29 +1,13 @@
 <% if current_user %>
-<div class="container mx-auto mt-28 px-5 flex w-4/5">
-  <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-7xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-blue-600">Better Data</span> Scalable AI.</h1>
-  <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
-</div><br>
-<%= render template: 'messages/index' %>
-  <div class="flex flex-col ">
-    <% @messages.reverse.each do |message| %>
-      <div class="flex mx-auto flex-col w-4/5 mt-4">
-        <div class="flex items-center space-x-2 rtl:space-x-reverse">
-          <%= image_tag(user_avatar, width: 35, class: "mb-1 rounded-lg") %>
-          <span class="text-sm font-semibold text-gray-900 dark:text-white"><%= message.user.username %></span>
-          <span class="text-sm font-normal text-gray-500 dark:text-gray-400"><%= message.created_at.strftime('%H:%M') %></span>
-        </div>
-        <div class="w-full flex flex-col leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
-          <p class="text-sm font-semibold text-gray-900 dark:text-white"><%= message.body %></p>
-          <p class="mt-2">
-            <%= link_to "Edit", edit_message_path(message.id), class: "px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" %>
-          </p>
-        </div>
-      </div>
-    <% end %>
-  </div>
+  <div class="container mx-auto mt-28 px-5 flex w-4/5">
+    <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-7xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-blue-600">Bloom </span> language model</h1>
+    <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">BLOOM is an autoregressive Large Language Model (LLM), trained to continue text from a prompt on vast amounts of text data using industrial-scale computational resources.</p>
+  </div><br>
+  <%= render template: 'messages/new' %>
+  <%= render template: 'messages/index' %>
 <% else %>
-<div class="container mx-auto mt-28 px-5 flex w-4/5">
-  <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-7xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-blue-600">Better Data</span> Scalable AI.</h1>
-  <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
-</div>
-<% end %>
+  <div class="container mx-auto mt-28 px-5 flex w-4/5">
+    <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-7xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-blue-600">Better Data</span> Scalable AI.</h1>
+    <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+  </div>
+ <% end %>

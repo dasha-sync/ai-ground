@@ -1,7 +1,9 @@
 class HomeController < ApplicationController
   def index
     @message = Message.new
-    @messages = current_user.messages
+    if current_user
+      @messages = current_user.messages
+    end
   end
 
   def create; end
